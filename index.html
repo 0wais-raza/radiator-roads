@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>McQueen Roads 3D</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #87ceeb;
+      font-family: Arial, sans-serif;
+    }
+    #ui {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      border: 2px solid #e53e3e;
+      pointer-events: none; /* Lets you click through it */
+    }
+    h1 { margin: 0 0 5px 0; color: #f6ad55; font-size: 20px; }
+    p { margin: 0; font-size: 14px; color: #cbd5e0; }
+  </style>
+
+  <!-- Import Maps to load Three.js and Cannon-es cleanly -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/",
+        "cannon-es": "https://unpkg.com/cannon-es@0.20.0/dist/cannon-es.js"
+      }
+    }  
+  </script>
+</head>
+<body>
+  
+  <!-- Game UI -->
+  <div id="ui">
+    <h1>⚡ McQueen Roads</h1>
+    <p>Use <strong>W A S D</strong> or <strong>Arrows</strong> to drive!</p>
+  </div>
+
+  <!-- Connect your JavaScript game logic -->
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
